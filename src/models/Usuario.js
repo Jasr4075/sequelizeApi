@@ -15,6 +15,7 @@ const Usuario = sequelize.define(
             allowNull: false
         },
         cpfcnpj:{
+            field:'cpf_cnpj',
             type: DataTypes.STRING(18),
             allowNull: false,
             unique: true

@@ -20,7 +20,7 @@ const getById = async (req, res) => {
     id = id.replace(/\D/g, '');
     if (!id) {
       return res.status(400).send({
-        message: 'Informe um id válido para consulta'
+        message: 'Informe um id válido'
       });
     }
 
@@ -32,7 +32,7 @@ const getById = async (req, res) => {
 
     if (!autor) {
       return res.status(400).send({
-        message: `Não foi encontrado autor com o id ${id}`
+        message: `Não foi encontrado autor com o id informado ${id}`
       });
     }
 
@@ -70,7 +70,7 @@ const create = async (dados, res) => {
 
   if (categoriaExistente) {
     return res.status(400).send({
-      message: 'este autor já está cadastrado'
+      message: 'o autor informado já está cadastrado'
     })
   }
 
@@ -89,7 +89,7 @@ const update = async (id, dados, res) => {
   });
 
   if (!autor) {
-    return res.status(400).send({ type: 'error', message: `Não foi encontrado autor com o id ${id}` })
+    return res.status(400).send({ type: 'error', message: `Não foi encontrado autor com esse id ${id}` })
   }
 
   Object.keys(dados).forEach(dado => autor[dado] = dados[dado])

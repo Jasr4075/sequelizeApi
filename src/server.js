@@ -34,6 +34,6 @@ app.use((req, res) => {
   res.status(404).send('Página não encontrada')
 });
 
-app.listen(3333, () => {
-  console.log(`servidor rodando na porta 3000!`);
+app.listen(3000, () => {
+  console.log(`servidor rodando na porta 3000 http://localhost:3000`);
 });
