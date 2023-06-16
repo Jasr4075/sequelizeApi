@@ -204,7 +204,6 @@ const verificarEmprestimo = async (req, res) => {
   
   
   try {
-   
     let livroEmprestimo = await sequelize.query(`
       select
         *

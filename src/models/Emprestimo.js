@@ -36,4 +36,5 @@ Emprestimo.belongsTo(Usuario, {
   }
 });
 
+
 export default Emprestimo;
